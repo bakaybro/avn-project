@@ -18,9 +18,12 @@ public class User extends BaseEntity {
     @Column(name = "full_name")
     private String fullName;
 
+    @Column(name = "email")
+    private String email;
+
     @Column(name = "password")
     private String password;
 
-    @Column(name = "status")
-    private Long status;
+    @Column(name = "is_status")
+    private Long isStatus;
 }
