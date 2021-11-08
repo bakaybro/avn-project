@@ -19,5 +19,5 @@ public class DirectoryOfGradesIsOffsets extends BaseEntity {
     private Integer grades;
 
     @Column(name = "is_offset")
-    private boolean isOffset;
+    private Boolean isOffset;
 }

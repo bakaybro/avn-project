@@ -17,9 +17,9 @@ public class Headman extends BaseEntity {
     @JoinColumn(name = "group_id")
     private Group group;
 
-//    @ManyToOne
-//    @JoinColumn(name = "role_id")
-//    private Role roleId;
+    @ManyToOne
+    @JoinColumn(name = "role_id")
+    private UserRole roleId;
 
     @Column(name = "full_name")
     private String fullName;

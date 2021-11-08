@@ -30,5 +30,5 @@ public class GradesOfStudents extends BaseEntity {
     private DirectoryOfGradesIsOffsets gradesIsOffsetId;
 
     @Column(name = "is_attestation")
-    private boolean isAttestation;
+    private Boolean isAttestation;
 }
