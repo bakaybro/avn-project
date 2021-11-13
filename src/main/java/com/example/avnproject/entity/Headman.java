@@ -18,8 +18,8 @@ public class Headman extends BaseEntity {
     private Group group;
 
     @ManyToOne
-    @JoinColumn(name = "role_id")
-    private UserRole roleId;
+    @JoinColumn(name = "user_id")
+    private User user;
 
     @Column(name = "full_name")
     private String fullName;

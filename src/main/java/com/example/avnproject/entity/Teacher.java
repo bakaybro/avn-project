@@ -2,9 +2,7 @@ package com.example.avnproject.entity;
 
 import lombok.*;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.Date;
 
 @Entity
@@ -24,4 +22,8 @@ public class Teacher extends BaseEntity {
 
     @Column(name = "telephone")
     private String telephone;
+
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User user;
 }

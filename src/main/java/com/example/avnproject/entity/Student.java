@@ -29,7 +29,11 @@ public class Student extends BaseEntity {
 
     @ManyToOne
     @JoinColumn(name = "professions_id")
-    private DirectoryOfProfessions professionsId;
+    private DirectoryOfProfessions professions;
+
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User user;
 
     @Column(name = "note")
     private String note;
