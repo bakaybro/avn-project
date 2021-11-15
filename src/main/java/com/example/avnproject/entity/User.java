@@ -2,9 +2,7 @@ package com.example.avnproject.entity;
 
 import lombok.*;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "users")
@@ -15,8 +13,8 @@ import javax.persistence.Table;
 @Builder
 public class User extends BaseEntity {
 
-    @Column(name = "full_name")
-    private String fullName;
+    @Column(name = "username")
+    private String username;
 
     @Column(name = "email")
     private String email;
@@ -26,4 +24,8 @@ public class User extends BaseEntity {
 
     @Column(name = "is_status")
     private Long isStatus;
+
+    @ManyToOne
+    @JoinColumn(name = "user_role_id")
+    private UserRole userRole;
 }

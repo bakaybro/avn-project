@@ -8,8 +8,9 @@ import lombok.*;
 @NoArgsConstructor
 @Builder
 public class UserModel extends BaseModel {
-    private String fullName;
+    private String username;
     private String password;
     private String email;
     private Long isStatus;
+    private Long userRoleId;
 }
