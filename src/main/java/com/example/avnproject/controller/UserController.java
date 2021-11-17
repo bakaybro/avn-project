@@ -23,7 +23,7 @@ public class UserController {
         return new ResponseMessage<List<User>>().prepareSuccessMessage(userService.getAll());
     }
 
-    @PostMapping("/create-user")
+    @PostMapping("/create")
     public ResponseMessage<UserModel> createUser(@RequestBody UserModel userModel) {
         ResponseMessage<UserModel> responseMessage = new ResponseMessage<>();
         User user = new UserConverter().convertFromModel(userModel);
@@ -43,12 +43,12 @@ public class UserController {
         return new ResponseMessage<User>().prepareSuccessMessage(userService.getById(id));
     }
 
-    @PutMapping("/update-user")
+    @PutMapping("/update")
     public ResponseMessage<User> updateUser(@RequestBody User user) {
         return new ResponseMessage<User>().prepareSuccessMessage(userService.update(user));
     }
 
-    @DeleteMapping("/delete-user")
+    @DeleteMapping("/delete/{id}")
     public ResponseMessage<User> deleteById(@PathVariable Long id) {
         return new ResponseMessage<User>().prepareSuccessMessage(userService.deleteById(id));
     }

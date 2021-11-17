@@ -8,6 +8,7 @@ import lombok.*;
 @NoArgsConstructor
 @Builder
 public class UserRoleModel extends BaseModel {
+    private Long id;
     private String roleName;
-    private Long user;
+    private Long userId;
 }
