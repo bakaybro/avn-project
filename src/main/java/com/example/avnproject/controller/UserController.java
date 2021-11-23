@@ -43,6 +43,11 @@ public class UserController {
         return new ResponseMessage<User>().prepareSuccessMessage(userService.getById(id));
     }
 
+    @GetMapping("/get-current")
+    public UserModel getCurrentUser() {
+        return new UserConverter().convertToEntity(userService.getCurrentUser());
+    }
+
     @PutMapping("/update")
     public ResponseMessage<User> updateUser(@RequestBody User user) {
         return new ResponseMessage<User>().prepareSuccessMessage(userService.update(user));
