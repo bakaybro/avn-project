@@ -13,6 +13,9 @@ import javax.persistence.*;
 @Builder
 public class User extends BaseEntity {
 
+    @Column(name = "full_name")
+    private String fullName;
+
     @Column(name = "username")
     private String username;
 
